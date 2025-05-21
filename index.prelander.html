@@ -1,147 +1,206 @@
- 80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
 <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekskluzywna Oferta Filmów - Tylko w Polsce</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: rgba(0,0,0,0.7);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #f8d56b;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #4fc3f7;
+            font-size: 1.8rem;
+        }
+        .offer-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid #4fc3f7;
+        }
+        .countdown {
+            background: #d32f2f;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .cta-button {
+            display: block;
+            background: linear-gradient(45deg, #FF5722, #FF9800);
+            color: white;
+            text-align: center;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 30px auto;
+            width: 80%;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(255, 87, 34, 0.6);
+        }
+        .signups {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(76, 175, 80, 0.2);
+            border-radius: 10px;
+            border: 1px solid #4CAF50;
+        }
+        .signups-number {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .feature {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #4fc3f7;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #aaa;
+            border-top: 1px solid #333;
+        }
+        .terms {
+            margin-top: 20px;
+            font-size: 0.7rem;
+            color: #777;
+        }
+        @media (max-width: 768px) {
+            .feature {
+                width: 100%;
+            }
+            .cta-button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>🔥 Unlock Free Games & Must-Have Apps!</h1>
-    <p>Explore our best picks and <span class="highlight">get exclusive deals today</span>! Limited time only!</p>
-  </header>
+    <div class="container">
+        <header>
+            <h1>EKSLKLUZYWNA OFERTA STREAMINGU FILMÓW!</h1>
+            <h2>Tylko dla użytkowników Apple iOS w Polsce - Oferta ograniczona czasowo!</h2>
+        </header>
 
-  <section class="section">
-    <h2>Featured Web Games</h2>
-    <div class="games">
-      <div class="card">
-        <img src="/mnt/data/86efb887e5a85825ce52c652724246d6.png" alt="Football Tricks">
-        <p><strong>Football Tricks</strong></p>
-      </div>
-      <div class="card">
-        <img src="/mnt/data/d991db251a8fa9d775245be830aed9b6.png" alt="Race Rush">
-        <p><strong>Race Rush</strong></p>
-      </div>
-      <div class="card">
-        <img src="/mnt/data/3a39190c7544eb0abc48a3a544881ceb.png" alt="Ninja Dash">
-        <p><strong>Ninja Dash</strong></p>
-      </div>
+        <div class="countdown" id="countdown">
+            Oferta wygasa za: 24:59:59
+        </div>
+
+        <div class="offer-box">
+            <h2>🔥 Specjalna Oferta Tylko Dla Ciebie! 🔥</h2>
+            <p>Jako użytkownik Apple iOS w Polsce, kwalifikujesz się do naszej ekskluzywnej oferty pakietu filmów wartej <strong>$2.05</strong> - dostępnej tylko przez ograniczony czas!</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Tysiące Filmów</h3>
+                    <p>Dostęp do najnowszych hitów i klasyków kina</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Optymalizacja Mobilna</h3>
+                    <p>Idealne wrażenia streamingowe na iOS</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Błyskawicznie Szybkie</h3>
+                    <p>Bez bufferingu, natychmiastowe odtwarzanie</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="signups">
+            <div class="signups-number">1,455,456</div>
+            <div>osób już skorzystało z tej oferty!</div>
+        </div>
+
+        <a href="https://singingfiles.com/show.php?l=0&u=2394717&id=59781" class="cta-button">
+            ODBIERZ SWOJĄ OFERTĘ TERAZ!
+        </a>
+
+        <div class="offer-box">
+            <h2>⏰ Nie Przegap Okazji!</h2>
+            <p>Ta ekskluzywna oferta jest dostępna tylko dla użytkowników Apple iOS w Polsce i wkrótce zniknie. Ponad 1.4 miliona osób już skorzystało - czy Ty będziesz następny?</p>
+            <p><strong>Po prostu kliknij przycisk poniżej, aby rozpocząć!</strong></p>
+        </div>
+
+        <a href="https://singingfiles.com/show.php?l=0&u=2394717&id=59781" class="cta-button">
+            TAK! CHCĘ TĘ FANTASTYCZNĄ OFERTĘ!
+        </a>
+
+        <footer>
+            <p>© 2025 Oferta Streaming Filmów. Wszelkie prawa zastrzeżone.</p>
+            <div class="terms">
+                <p>Klikając powyższy przycisk, akceptujesz nasze Warunki Korzystania z Usługi i Politykę Prywatności. Oferta dostępna tylko dla użytkowników Apple iOS w Polsce. Oferta ograniczona czasowo. Mogą obowiązywać ograniczenia.</p>
+                <p>Jest to oferta promocyjna niezwiązana z Apple Inc. Wszystkie znaki towarowe są własnością ich odpowiednich właścicieli.</p>
+            </div>
+        </footer>
     </div>
-  </section>
 
-  <section class="section">
-    <h2>Top Free Mobile Apps</h2>
-    <div class="apps">
-      <div class="card">
-        <img src="/mnt/data/86efb887e5a85825ce52c652724246d6.png" alt="Pixy Editor">
-        <p><strong>Pixy Editor</strong></p>
-      </div>
-      <div class="card">
-        <img src="/mnt/data/d991db251a8fa9d775245be830aed9b6.png" alt="VPN Secure">
-        <p><strong>VPN Secure</strong></p>
-      </div>
-      <div class="card">
-        <img src="/mnt/data/3a39190c7544eb0abc48a3a544881ceb.png" alt="Phone Cleaner">
-        <p><strong>Phone Cleaner</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section countdown">
-    ⏳ Hurry! Offer ends in: <span id="countdown-timer">05:00</span>
-  </section>
-
-  <section class="section">
-    <a class="cta-button" href="https://singingfiles.com/show.php?l=0&u=2394717&id=59781" target="_blank">💎 Get the Deal Now!</a>
-  </section>
-
-  <section class="section testimonials">
-    <h2>What Users Are Saying</h2>
-    <p class="testimonial">"These games are super fun and actually free! Highly recommended!" – Alex T.</p>
-    <p class="testimonial">"Downloaded the apps, and my phone feels brand new. 5 stars!" – Maria K.</p>
-    <p class="testimonial">"Quick, easy, and free. What more could you want?" – Jordan W.</p>
-  </section>
-
-  <script>
-    // Countdown timer (5 mins)
-    let timeLeft = 300;
-    const timerEl = document.getElementById("countdown-timer");
-    const timerInterval = setInterval(() => {
-      const mins = String(Math.floor(timeLeft / 60)).padStart(2, '0');
-      const secs = String(timeLeft % 60).padStart(2, '0');
-      timerEl.textContent = `${mins}:${secs}`;
-      timeLeft--;
-      if (timeLeft < 0) clearInterval(timerInterval);
-    }, 1000);
-  </script>
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const end = new Date();
+            end.setHours(23, 59, 59, 999); // Set to end of day
+            
+            const diff = end - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000;
+            
+            document.getElementById('countdown').innerHTML = 
+                `Oferta wygasa za: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
-        
