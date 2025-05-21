@@ -3,18 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusive: Get 3 Months of StreamingMovies Free! (UK Only)</title>
+    <title>Exclusive Offer: 3 Months StreamingMovies Free (UK Only)</title>
     <style>
-        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; text-align: center; padding: 20px; margin: 0; }
-        .container { max-width: 600px; margin: 0 auto; background: rgba(0, 0, 0, 0.7); border-radius: 15px; padding: 30px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); }
-        h1 { color: #f8c537; font-size: 28px; margin-bottom: 20px; }
-        .benefits { text-align: left; margin: 25px 0; }
-        .benefit-item { display: flex; align-items: center; margin-bottom: 15px; font-size: 16px; }
-        .benefit-item img { width: 20px; margin-right: 10px; }
-        .countdown { background: #e63946; padding: 10px; border-radius: 5px; display: inline-block; margin: 15px 0; font-weight: bold; }
-        .cta-button { background: #f8c537; color: #000; border: none; padding: 15px 30px; font-size: 18px; border-radius: 50px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 20px; }
-        .flags { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
-        .flag { width: 30px; }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        h1 {
+            color: #f8c537;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .benefits {
+            text-align: left;
+            margin: 25px 0;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .benefit-item img {
+            width: 20px;
+            margin-right: 10px;
+        }
+        .countdown {
+            background: #e63946;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .cta-button {
+            background: #f8c537;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .cta-button:hover {
+            background: #ffd700;
+            transform: scale(1.05);
+        }
+        .flags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .flag {
+            width: 30px;
+        }
+        .legal-links {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        .legal-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 500px;
+            background: #16213e;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 100;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .legal-popup h3 {
+            color: #f8c537;
+            margin-top: 0;
+        }
+        .legal-popup ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .legal-popup button {
+            background: #f8c537;
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 99;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .legal-popup {
+                width: 95%;
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -49,6 +167,65 @@
         </a>
         
         <p><small>Requires credit card for verification. Cancel anytime before trial ends.</small></p>
+        
+        <div class="legal-links">
+            <a href="#" onclick="showLegal('privacy')">Privacy Policy</a> | 
+            <a href="#" onclick="showLegal('terms')">Terms of Service</a>
+        </div>
+    </div>
+
+    <!-- Legal Popups -->
+    <div class="overlay" id="overlay" onclick="hideLegal()"></div>
+    
+    <div class="legal-popup" id="privacy-popup">
+        <h3>Privacy Policy</h3>
+        <p>Last Updated: June 2023</p>
+        
+        <p>This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from this promotional offer.</p>
+        
+        <h4>Information We Collect</h4>
+        <ul>
+            <li><strong>Device Information:</strong> We collect information about the device you use including IP address, browser type, and operating system.</li>
+            <li><strong>Order Information:</strong> When you subscribe, we collect your payment information which is processed securely by our payment processor.</li>
+        </ul>
+        
+        <h4>How We Use Your Information</h4>
+        <p>We use this information to:</p>
+        <ul>
+            <li>Process your subscription</li>
+            <li>Communicate with you</li>
+            <li>Screen for potential risk or fraud</li>
+        </ul>
+        
+        <h4>Sharing Your Information</h4>
+        <p>We share your information with:</p>
+        <ul>
+            <li>Our payment processor to complete your subscription</li>
+            <li>When required by law</li>
+        </ul>
+        
+        <p>We never sell your personal information.</p>
+        <button onclick="hideLegal()">Close</button>
+    </div>
+    
+    <div class="legal-popup" id="terms-popup">
+        <h3>Terms of Service</h3>
+        <p>Last Updated: June 2023</p>
+        
+        <h4>Subscription Terms</h4>
+        <ul>
+            <li>This offer provides 3 months free access to StreamingMovies, followed by automatic subscription at £9.99/month unless canceled.</li>
+            <li>You may cancel anytime by contacting customer service at least 24 hours before your trial ends.</li>
+            <li>Valid payment method required. UK iOS users only.</li>
+        </ul>
+        
+        <h4>Affiliate Disclosure</h4>
+        <p>This is an independent promotional page. We receive compensation when you sign up through our links.</p>
+        
+        <h4>Limitation of Liability</h4>
+        <p>We are not responsible for service interruptions or content availability on StreamingMovies platform.</p>
+        
+        <button onclick="hideLegal()">Close</button>
     </div>
 
     <script>
@@ -68,6 +245,18 @@
                     timer = duration;
                 }
             }, 1000);
+        }
+
+        // Legal popups
+        function showLegal(type) {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById(type + '-popup').style.display = 'block';
+        }
+
+        function hideLegal() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('privacy-popup').style.display = 'none';
+            document.getElementById('terms-popup').style.display = 'none';
         }
 
         window.onload = function () {
