@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekskluzywna Oferta Filmów - Tylko w Polsce</title>
+    <title>Zarabiaj z Surveoo - Dołącz do płatnych ankiet!</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,32 +13,30 @@
             color: #fff;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
         header {
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 0;
             background: rgba(0,0,0,0.7);
             border-radius: 10px;
             margin-bottom: 30px;
+            border: 1px solid #4fc3f7;
         }
         h1 {
             color: #f8d56b;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
         }
         h2 {
             color: #4fc3f7;
             font-size: 1.8rem;
         }
-        .offer-box {
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-            border: 1px solid #4fc3f7;
+        h3 {
+            color: #f8d56b;
+            font-size: 1.4rem;
         }
         .countdown {
             background: #d32f2f;
@@ -54,7 +52,7 @@
             background: linear-gradient(45deg, #FF5722, #FF9800);
             color: white;
             text-align: center;
-            padding: 15px 30px;
+            padding: 18px 30px;
             font-size: 1.5rem;
             border-radius: 50px;
             text-decoration: none;
@@ -63,43 +61,100 @@
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 7px 20px rgba(255, 87, 34, 0.6);
         }
-        .signups {
-            text-align: center;
-            font-size: 1.8rem;
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
             margin: 40px 0;
+            text-align: center;
+        }
+        .stat-box {
+            width: 22%;
             padding: 20px;
-            background: rgba(76, 175, 80, 0.2);
+            background: rgba(255,255,255,0.1);
             border-radius: 10px;
-            border: 1px solid #4CAF50;
+            margin: 10px;
+            border: 1px solid #4fc3f7;
         }
-        .signups-number {
-            font-size: 2.5rem;
-            color: #4CAF50;
+        .stat-number {
+            font-size: 2rem;
             font-weight: bold;
+            color: #4fc3f7;
+            margin: 10px 0;
         }
-        .features {
+        .benefits {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin: 40px 0;
         }
-        .feature {
+        .benefit {
+            width: 48%;
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #4fc3f7;
+            display: flex;
+            align-items: flex-start;
+        }
+        .benefit-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            color: #f8d56b;
+        }
+        .testimonials {
+            margin: 50px 0;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #4fc3f7;
+            text-align: center;
+        }
+        .testimonial-number {
+            font-size: 3rem;
+            color: #f8d56b;
+            font-weight: bold;
+        }
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        .step {
             width: 30%;
             text-align: center;
-            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            border: 1px solid #4fc3f7;
         }
-        .feature-icon {
+        .step-number {
             font-size: 2.5rem;
+            color: #f8d56b;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .payment-method {
+            margin: 0 15px;
+            text-align: center;
             color: #4fc3f7;
-            margin-bottom: 10px;
         }
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             margin-top: 50px;
             font-size: 0.8rem;
             color: #aaa;
@@ -110,12 +165,41 @@
             font-size: 0.7rem;
             color: #777;
         }
+        .affiliate-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .affiliate-tab {
+            padding: 15px 25px;
+            background: rgba(255,255,255,0.1);
+            margin: 0 10px;
+            border-radius: 8px;
+            border: 1px solid #4fc3f7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            color: #f8d56b;
+        }
+        .affiliate-tab:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.2);
+        }
         @media (max-width: 768px) {
-            .feature {
+            .benefit, .stat-box, .step {
                 width: 100%;
             }
             .cta-button {
                 width: 100%;
+            }
+            .stats, .steps {
+                flex-direction: column;
+            }
+            .affiliate-tabs {
+                flex-direction: column;
+            }
+            .affiliate-tab {
+                margin: 5px 0;
             }
         }
     </style>
@@ -123,61 +207,126 @@
 <body>
     <div class="container">
         <header>
-            <h1>EKSLKLUZYWNA OFERTA STREAMINGU FILMÓW!</h1>
-            <h2>Tylko dla użytkowników Apple iOS w Polsce - Oferta ograniczona czasowo!</h2>
+            <h1>ZARABIAJ Z SURVEOO!</h1>
+            <h2>Dołącz do płatnych ankiet i zarabiaj do 225$ miesięcznie!</h2>
         </header>
 
         <div class="countdown" id="countdown">
-            Oferta wygasa za: 24:59:59
+            Oferta kończy się za: 23:59:59
         </div>
 
-        <div class="offer-box">
-            <h2>🔥 Specjalna Oferta Tylko Dla Ciebie! 🔥</h2>
-            <p>Jako użytkownik Apple iOS w Polsce, kwalifikujesz się do naszej ekskluzywnej oferty pakietu filmów wartej <strong>$2.05</strong> - dostępnej tylko przez ograniczony czas!</p>
-            
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">🎬</div>
-                    <h3>Tysiące Filmów</h3>
-                    <p>Dostęp do najnowszych hitów i klasyków kina</p>
+        <div class="affiliate-tabs">
+            <div class="affiliate-tab" onclick="window.location.href='https://singingfiles.com/show.php?l=0&u=2394717&id=59781'">Dołącz Teraz</div>
+            <div class="affiliate-tab" onclick="window.location.href='https://singingfiles.com/show.php?l=0&u=2394717&id=59781'">Zobacz Ofertę</div>
+            <div class="affiliate-tab" onclick="window.location.href='https://singingfiles.com/show.php?l=0&u=2394717&id=59781'">Zacznij Zarabiać</div>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <h2>Szybka i darmowa rejestracja, bez wymaganych umiejętności</h2>
+            <p>Jesteś tylko kilka kliknięć od zarabiania pieniędzy!</p>
+        </div>
+
+        <a href="https://singingfiles.com/show.php?l=0&u=2394717&id=59781" class="cta-button">
+            ZAREJESTRUJ SIĘ TERAZ ZA DARMO!
+        </a>
+
+        <h2 style="text-align: center;">Korzyści</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <div class="benefit-icon">💸</div>
+                <div>
+                    <h3>Natychmiastowe i bezpieczne wypłaty</h3>
+                    <p>Otrzymuj wynagrodzenie przez Amazon, PayPal lub przelew bankowy</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">📱</div>
-                    <h3>Optymalizacja Mobilna</h3>
-                    <p>Idealne wrażenia streamingowe na iOS</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">🎁</div>
+                <div>
+                    <h3>Nagrody w postaci kart podarunkowych</h3>
+                    <p>Jeśli wolisz, otrzymuj nagrody w postaci ekskluzywnych kart podarunkowych</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Błyskawicznie Szybkie</h3>
-                    <p>Bez bufferingu, natychmiastowe odtwarzanie</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">📊</div>
+                <div>
+                    <h3>Ankiety wysokiej jakości</h3>
+                    <p>Różnorodne i interesujące tematy: moda, technologia, podróże...</p>
+                </div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">⏱️</div>
+                <div>
+                    <h3>Pełna elastyczność</h3>
+                    <p>Odpowiadaj na ankiety kiedy chcesz, z dowolnego urządzenia</p>
                 </div>
             </div>
         </div>
 
-        <div class="signups">
-            <div class="signups-number">1,455,456</div>
-            <div>osób już skorzystało z tej oferty!</div>
+        <div class="testimonials">
+            <div>
+                <span class="testimonial-number">26,673,006</span><br>
+                zadowolonych użytkowników już zarabia z Surveoo!
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Super proste działanie</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Zarejestruj się za darmo w 30 sekund</h3>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Odpowiadaj na ankiety dopasowane do twoich zainteresowań</h3>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Zarabiaj gotówkę lub otrzymuj karty podarunkowe natychmiast</h3>
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <div class="payment-method">
+                <div style="font-size: 2.5rem;">💰</div>
+                <div>Wypłaty gotówkowe</div>
+            </div>
+            <div class="payment-method">
+                <div style="font-size: 2.5rem;">🛒</div>
+                <div>Karty podarunkowe</div>
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">W liczbach...</h2>
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">26,673,006</div>
+                <div>Użytkowników</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">197</div>
+                <div>Krajów</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">93,083,130</div>
+                <div>Ankiet</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">5 Lat</div>
+                <div>Doświadczenia</div>
+            </div>
         </div>
 
         <a href="https://singingfiles.com/show.php?l=0&u=2394717&id=59781" class="cta-button">
-            ODBIERZ SWOJĄ OFERTĘ TERAZ!
-        </a>
-
-        <div class="offer-box">
-            <h2>⏰ Nie Przegap Okazji!</h2>
-            <p>Ta ekskluzywna oferta jest dostępna tylko dla użytkowników Apple iOS w Polsce i wkrótce zniknie. Ponad 1.4 miliona osób już skorzystało - czy Ty będziesz następny?</p>
-            <p><strong>Po prostu kliknij przycisk poniżej, aby rozpocząć!</strong></p>
-        </div>
-
-        <a href="https://singingfiles.com/show.php?l=0&u=2394717&id=59781" class="cta-button">
-            TAK! CHCĘ TĘ FANTASTYCZNĄ OFERTĘ!
+            ROZPOCZNIJ ZARABIANIE JUŻ DZIŚ!
         </a>
 
         <footer>
-            <p>© 2025 Oferta Streaming Filmów. Wszelkie prawa zastrzeżone.</p>
+            <p>Copyright © 2025 Surveoo. Wszelkie prawa zastrzeżone.</p>
             <div class="terms">
-                <p>Klikając powyższy przycisk, akceptujesz nasze Warunki Korzystania z Usługi i Politykę Prywatności. Oferta dostępna tylko dla użytkowników Apple iOS w Polsce. Oferta ograniczona czasowo. Mogą obowiązywać ograniczenia.</p>
-                <p>Jest to oferta promocyjna niezwiązana z Apple Inc. Wszystkie znaki towarowe są własnością ich odpowiednich właścicieli.</p>
+                <p>*Kwota, którą zarobisz, zależy od liczby ankiet, w których weźmiesz udział. Na przykład ankieta jest średnio płatna 2€. Jeśli wykonasz 5 ankiet dziennie, 5 dni w tygodniu, możesz zarobić 200€ miesięcznie.</p>
+                <p>**Amazon nie sponsoruje tej promocji. Amazon, logo Amazon i logo uśmiechu są znakami towarowymi lub zastrzeżonymi znakami towarowymi Amazon lub jej podmiotów stowarzyszonych. Karty podarunkowe mogą być wykorzystane na stronie Amazon.</p>
+                <p>**PayPal nie sponsoruje tej promocji. PayPal, logo PayPal są znakami towarowymi lub zastrzeżonymi znakami towarowymi PayPal lub jej podmiotów stowarzyszonych. Nasi członkowie mogą żądać wypłaty zarobków za pośrednictwem PayPal.</p>
+                <p><a href="#" style="color: #4fc3f7;">Warunki korzystania</a> | <a href="#" style="color: #4fc3f7;">Polityka prywatności</a> | <a href="#" style="color: #4fc3f7;">Informacje prawne</a> | <a href="#" style="color: #4fc3f7;">Kontakt</a></p>
             </div>
         </footer>
     </div>
@@ -193,10 +342,10 @@
             
             const hours = Math.floor(diff / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000;
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
             
             document.getElementById('countdown').innerHTML = 
-                `Oferta wygasa za: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                `Oferta kończy się za: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
         
         updateCountdown();
