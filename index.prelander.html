@@ -3,127 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Win an iPhone 16 Now!</title>
+    <title>StreamingMovies - Get 30 Days for Just £0.01!</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary: #e50914;
+            --secondary: #141414;
+            --accent: #f5f5f1;
+            --text: #ffffff;
+            --highlight: #ffcc00;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #6a1b9a, #42a5f5);
-            color: #fff;
-            text-align: center;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
-        .header {
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.9);
-            margin: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            color: #6a1b9a;
+        
+        body {
+            background-color: var(--secondary);
+            color: var(--text);
+            line-height: 1.6;
         }
-        .header h1 {
-            font-size: 48px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-        .header p {
-            font-size: 24px;
-            margin: 10px 0;
-        }
-        .timer {
-            font-size: 36px;
-            background: #42a5f5;
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            border-radius: 10px;
+            text-align: center; /* Global centering */
+        }
+        
+        /* Centered Header */
+        .header-content {
             display: inline-block;
-            margin: 20px 0;
-        }
-        .cta-button {
-            display: block;
-            padding: 15px 40px;
-            font-size: 24px;
-            color: #fff;
-            background: #ffca28;
-            text-decoration: none;
+            text-align: center;
+            padding: 30px 40px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080') center/cover;
             border-radius: 10px;
-            margin: 20px auto;
-            width: 200px;
-            transition: background 0.3s;
+            margin: 20px 0;
+            width: 100%;
         }
-        .cta-button:hover {
-            background: #ffb300;
+        
+        /* Countdown Timer */
+        .countdown {
+            background: rgba(229, 9, 20, 0.3);
+            padding: 12px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 15px auto;
+            font-weight: bold;
+            animation: pulse 2s infinite;
         }
-        .testimonials {
-            background: rgba(255, 255, 255, 0.8);
-            margin: 20px;
-            padding: 20px;
-            border-radius: 15px;
-            color: #6a1b9a;
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
-        .testimonials h2 {
-            font-size: 30px;
+        
+        /* Centered CTAs */
+        .cta-container {
+            margin: 25px 0;
         }
-        .testimonials p {
-            font-size: 18px;
-        }
-        .footer {
-            background: #6a1b9a;
-            color: #fff;
-            padding: 20px;
-            font-size: 14px;
-        }
-        .footer a {
-            color: #ffca28;
+        
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 5px;
             text-decoration: none;
-            margin: 0 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            display: inline-block;
+            animation: glow 2s infinite alternate;
+            margin: 10px 5px;
         }
-        .footer a:hover {
-            text-decoration: underline;
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 5px var(--primary); }
+            to { box-shadow: 0 0 20px var(--primary); }
+        }
+        
+        /* Centered 3-Step Process */
+        .steps-container {
+            margin: 40px auto;
+            max-width: 700px;
+        }
+        
+        .step-list {
+            text-align: center;
+            list-style-position: inside;
+            padding: 0;
+        }
+        
+        .step-list li {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            position: relative;
+            list-style-type: none;
+        }
+        
+        .step-list li:before {
+            content: "•";
+            color: var(--primary);
+            font-size: 2rem;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        /* Centered Bonus Section */
+        .bonus-box {
+            background: rgba(255,204,0,0.1);
+            border: 1px dashed var(--highlight);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 600px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header-content, .bonus-box {
+                padding: 20px;
+            }
+            .cta-button {
+                padding: 15px 25px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🎉 Win a Brand New iPhone 16! 🎉</h1>
-        <p>Enter now for your chance to win this amazing device!</p>
-        <p>Simply submit your email to participate in this exclusive giveaway!</p>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="header-content">
+            <h1 style="margin-bottom: 15px;">UNLIMITED MOVIES & TV SHOWS FOR JUST <span style="color: var(--highlight); font-size: 2.5rem;">£0.01</span></h1>
+            <p style="font-size: 1.1rem;">Start your 30-day trial today - then £49/month. Cancel anytime!</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown" id="countdown">
+                ⏳ OFFER EXPIRES IN: <span id="timer">05:00</span>
+            </div>
+            
+            <!-- Main CTA -->
+            <div class="cta-container">
+                <a href="https://singingfiles.com/show.php?l=0&u=2394717&id=68980" class="cta-button">🔥 START YOUR £0.01 TRIAL NOW!</a>
+            </div>
+            <div style="background-color: var(--primary); color: white; padding: 8px 20px; border-radius: 20px; display: inline-block; font-weight: bold;">🚨 ONLY 17 SPOTS LEFT!</div>
+        </header>
+        
+        <!-- Centered 3-Step Process -->
+        <section class="steps-container">
+            <h2 style="color: var(--primary); margin-bottom: 25px;">⚡ How It Works</h2>
+            <ul class="step-list">
+                <li><strong>Click "Start Your Trial"</strong> - You'll pay just £0.01 today</li>
+                <li><strong>Enter Your Details</strong> - Takes less than 60 seconds</li>
+                <li><strong>Stream Instantly!</strong> - No waiting, no buffering</li>
+            </ul>
+            
+            <!-- Secondary CTA -->
+            <div class="cta-container">
+                <a href="https://singingfiles.com/show.php?l=0&u=2394717&id=68980" class="cta-button">🎬 YES! START MY £0.01 TRIAL</a>
+            </div>
+        </section>
+        
+        <!-- Centered Bonus Section -->
+        <section class="bonus-box">
+            <h3 style="color: var(--highlight); margin-bottom: 15px;">🔥 LIMITED-TIME BONUS!</h3>
+            <p style="margin-bottom: 10px;">Sign up today and get:</p>
+            <ul style="text-align: center; list-style: none; padding: 0;">
+                <li style="margin: 10px 0;">🎁 <strong>+1 FREE Month</strong> (Use code <span style="background: black; padding: 2px 8px; border-radius: 3px;">MOVIE1</span>)</li>
+                <li style="margin: 10px 0;">🎁 <strong>Exclusive Behind-the-Scenes Content</strong></li>
+            </ul>
+            <p style="font-style: italic; margin-top: 15px;">Offer ends when timer hits zero!</p>
+        </section>
     </div>
 
-    <div class="timer" id="timer">Hurry! Time's Running Out: 05:00</div>
-
-    <a href="https://afflat3e3.com/trk/lnk/AA95B662-BBF6-4150-A91A-6631116F1354/?o=28492&c=918271&a=731935&k=E54D5CFFD95F7EFCAEE0C2659D7C77BC&l=31455" class="cta-button">Enter to Win!</a>
-
-    <div class="testimonials">
-        <h2>🚀 Join Thousands of Happy Participants!</h2>
-        <p>Over 15,000 users have already signed up for this incredible offer!</p>
-        <p>"I can't believe how easy it was to enter! Fingers crossed for the iPhone 16!" - Sarah K.</p>
-        <p>"This giveaway is legit! So excited to be a part of it!" - James L.</p>
-    </div>
-
-    <div class="footer">
-        <p>© 2025 WinMyOfferDeals. All rights reserved.</p>
-        <p>
-            <a href="/privacy-policy">Privacy Policy</a> | 
-            <a href="/terms-conditions">Terms & Conditions</a>
-        </p>
-    </div>
-
+    <!-- Countdown Script -->
     <script>
-        // Countdown timer set for 5 minutes
-        let time = 5 * 60; // 5 minutes in seconds
-        const timerElement = document.getElementById('timer');
-        function updateTimer() {
-            const minutes = Math.floor(time / 60);
-            const seconds = time % 60;
-            timerElement.textContent = `Hurry! Time's Running Out: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            if (time > 0) {
-                time--;
-                setTimeout(updateTimer, 1000);
-            } else {
-                timerElement.textContent = "Offer Expired!";
+        let timeLeft = 300;
+        const timer = document.getElementById('timer');
+        const countdown = setInterval(() => {
+            const minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            timer.innerHTML = `${minutes}:${seconds}`;
+            timeLeft--;
+            
+            if (timeLeft < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown').innerHTML = "⏰ OFFER EXPIRED!";
+                document.getElementById('countdown').style.background = "#333";
             }
-        }
-        updateTimer();
+        }, 1000);
     </script>
 </body>
 </html>
